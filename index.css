@@ -16,6 +16,10 @@ html {
   color: white;
 }
 
+::selection {
+  background: #ca8638; /* WebKit/Blink Browsers */
+}
+
 .container {
   display: flex;
   flex-direction: column;
