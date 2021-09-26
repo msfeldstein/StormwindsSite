@@ -55,3 +55,9 @@ img {
   padding: 16px;
   border-bottom: 6px solid #c4c4c4;
 }
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 70px !important;
+  }
+}

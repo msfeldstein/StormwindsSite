@@ -11,7 +11,6 @@ let i = 0;
 const img = document.querySelector("#svg-icon") as HTMLImageElement;
 const next = () => {
   const svg = svgs[i++ % svgs.length];
-  console.log(svg.pathname);
   img.src = svg.pathname;
   img.style.display = "block";
 };
