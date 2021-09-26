@@ -8,8 +8,12 @@ const sword = new URL("./assets/sword.svg", import.meta.url);
 const undead = new URL("./assets/undead.svg", import.meta.url);
 const svgs = [eldritch, gem, loveless, shard, sword, undead];
 let i = 0;
-setInterval(() => {
+const img = document.querySelector("#svg-icon") as HTMLImageElement;
+const next = () => {
   const svg = svgs[i++ % svgs.length];
   console.log(svg.pathname);
-  (document.querySelector("#svg-icon") as HTMLImageElement).src = svg.pathname;
-}, 1000);
+  img.src = svg.pathname;
+  img.style.display = "block";
+};
+next();
+setInterval(next, 1000);
